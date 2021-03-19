@@ -1,4 +1,4 @@
-module github.com/Colk-tech/docid
+module github.com/Colk-tech/randomid
 
 go 1.16
 
