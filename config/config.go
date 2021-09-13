@@ -1,5 +1,7 @@
 package config
 
 const (
-	MyName string = "randomid"
+	MaintainerName   string = "Colk-tech"
+	ProgramName      string = "randomid"
+	UsageDescription string = "--clear | [OPTIONS]"
 )

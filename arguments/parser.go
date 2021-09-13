@@ -5,10 +5,17 @@ import (
 	flags "github.com/jessevdk/go-flags"
 )
 
-func MakeParser(opts *Options) *flags.Parser {
-	parser := flags.NewParser(&opts, flags.Default)
-	parser.Name = config.MyName
-	parser.Usage = "[OPTIONS]"
+func Parse(opts *Options) (err error) {
+	parser := getParser(opts)
+	_, err = parser.Parse()
+
+	return err
+}
+
+func getParser(opts *Options) *flags.Parser {
+	parser := flags.NewParser(opts, flags.Default)
+	parser.Name = config.ProgramName
+	parser.Usage = config.UsageDescription
 
 	return parser
 }
